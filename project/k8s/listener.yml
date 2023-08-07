@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: listener-service
-        image: "remontada007/listener-service:1.0.0"
+        image: "listener-service:1.0.0"
         resources:
           requests:
             memory: "64Mi"
@@ -27,14 +27,14 @@ spec:
 
 ---
 
-apiVersion: v1 
-kind: Service 
-metadata: 
+apiVersion: v1
+kind: Service
+metadata:
   name: listener-service
 spec:
   selector:
     app: listener-service
-  ports: 
+  ports:
     - protocol: TCP
       name: web-port
       port: 80

@@ -17,11 +17,11 @@ spec:
         image: "mongo:4.2.17-bionic"
         env:
           - name: MONGO_INITDB_DATABASE
-            value: "<Your Database>"
+            value: "logs"
           - name: MONGO_INITDB_ROOT_USERNAME
-            value: "<Your Username>"
+            value: "admin"
           - name: MONGO_INITDB_ROOT_PASSWORD
-            value: "<Your Password>"
+            value: "password"
         resources:
           requests:
             memory: "64Mi"
@@ -34,14 +34,14 @@ spec:
 
 ---
 
-apiVersion: v1 
-kind: Service 
-metadata: 
+apiVersion: v1
+kind: Service
+metadata:
   name: mongo
 spec:
   selector:
     app: mongo
-  ports: 
+  ports:
     - protocol: TCP
       name: main-port
       port: 27017

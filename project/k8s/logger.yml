@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: logger-service
-        image: "remontada007/logger-service:1.0.1"
+        image: "logger-service:1.0.1"
         resources:
           requests:
             memory: "64Mi"
@@ -30,14 +30,14 @@ spec:
 
 ---
 
-apiVersion: v1 
-kind: Service 
-metadata: 
+apiVersion: v1
+kind: Service
+metadata:
   name: logger-service
 spec:
   selector:
     app: logger-service
-  ports: 
+  ports:
     - protocol: TCP
       name: web-port
       port: 80
