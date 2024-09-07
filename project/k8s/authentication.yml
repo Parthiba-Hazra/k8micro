@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: authentication-service
-        image: "remontada007/authentication-service:1.0.0"
+        image: "authentication-service:1.0.0"
         resources:
           requests:
             memory: "64Mi"
@@ -24,7 +24,7 @@ spec:
             cpu: "500m"
         env:
           - name: DSN
-            value: "host=host.minikube.internal port=5431 user=<your user> password=<your password> dbname=<your db-name> sslmode=disable timezone=UTC connect_timeout=5"
+            value: "host=host.minikube.internal port=5431 user=postgres password=password dbname=users sslmode=disable timezone=UTC connect_timeout=5"
         ports:
           - containerPort: 80
 

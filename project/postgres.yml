@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  
+
   postgres:
     image: 'postgres:14.0'
     ports:
@@ -11,8 +11,8 @@ services:
       mode: replicated
       replicas: 1
     environment:
-      POSTGRES_USER: <Your Postgres Username>
-      POSTGRES_PASSWORD: <Your Password> 
-      POSTGRES_DB: <Your Db-Name>
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: users
     volumes:
       - ./db-data/postgres/:/var/lib/postgresql/pg-data

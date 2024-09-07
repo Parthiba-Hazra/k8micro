@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: broker-service
-        image: "remontada007/broker-service:1.0.1"
+        image: "broker-service:1.0.1"
         resources:
           requests:
             memory: "64Mi"

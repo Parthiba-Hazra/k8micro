@@ -1,0 +1,20 @@
+{{define "base"}}
+    <!doctype html>
+    <html lang="en">
+    {{template "header" .}}
+
+    <body style="background-color: #f0f2f5; font-family: 'Poppins', sans-serif;">
+
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Go Microservices</a>
+      </div>
+    </nav>
+
+    {{block "content" .}} {{end}}
+
+    {{block "js" .}} {{end}}
+
+    </body>
+    </html>
+{{end}}

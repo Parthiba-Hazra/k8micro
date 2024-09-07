@@ -11,7 +11,7 @@ import (
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		render(w, "test.page.gohtml")
+		render(w, "test.page.html")
 	})
 
 	fmt.Println("Starting front end service on port 8081")
@@ -27,9 +27,8 @@ var templateFS embed.FS
 func render(w http.ResponseWriter, t string) {
 
 	partials := []string{
-		"templates/base.layout.gohtml",
-		"templates/header.partial.gohtml",
-		"templates/footer.partial.gohtml",
+		"templates/base.layout.html",
+		"templates/header.partial.html",
 	}
 
 	var templateSlice []string

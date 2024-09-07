@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mailer-service
-        image: "remontada007/mail-service:1.0.0"
+        image: "mail-service:1.0.0"
         env:
           - name: MAIL_DOMAIN
             value: ""
@@ -29,9 +29,9 @@ spec:
           - name: MAIL_PASSWORD
             value: ""
           - name: FROM_NAME
-            value: "<Your Name>"
+            value: "Parthiba"
           - name: FROM_ADDRESS
-            value: "<Your Email-Address>"
+            value: "parthibahazra@gmail.com"
         resources:
           requests:
             memory: "64Mi"
@@ -44,14 +44,14 @@ spec:
 
 ---
 
-apiVersion: v1 
-kind: Service 
-metadata: 
+apiVersion: v1
+kind: Service
+metadata:
   name: mailer-service
 spec:
   selector:
     app: mailer-service
-  ports: 
+  ports:
     - protocol: TCP
       name: main-port
       port: 80

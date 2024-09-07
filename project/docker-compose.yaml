@@ -8,7 +8,7 @@ services:
       dockerfile: ./../broker-service/broker-service.dockerfile
     restart: always
     ports:
-      - "8080:3000"
+      - "8080:8080"
     deploy:
       mode: replicated
       replicas: 1
@@ -28,7 +28,7 @@ services:
       dockerfile: ./../authentication-service/authentication-service.dockerfile
     restart: always
     ports:
-      - "8001:3000"
+      - "8001:8080"
     deploy:
       mode: replicated
       replicas: 1
@@ -94,7 +94,7 @@ services:
       - "8025:8025"
 
   rabbitmq:
-    image: 'rabbitmq:3.9-alpine'
+    image: 'rabbitmq:3.12-alpine'
     ports:
       - "5672:5672"
     deploy:
