@@ -2,6 +2,8 @@
 
 This repository contains the configuration files and deployment scripts for a microservices-based application using Kubernetes. The application consists of several services, including authentication, broker, front-end, listener, logger, mailer, MongoDB, RabbitMQ, and PostgreSQL.
 
+![System Architecture](./diagram-export-10-09-2024-15_03_10.svg)
+
 TODO: front end is not clearly defined yet
 
 ## Services Overview
